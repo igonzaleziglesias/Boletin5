@@ -17,21 +17,18 @@ public class Boletin5 {
         contaDestino.reintegro(500);
         contaOrigen.visualizar();
         contaDestino.visualizar();
-        
+
         System.out.println("\nIndique la cantidad a transferir: ");
-        double cant=ler.nextDouble();
-        
-        if (contaDestino.transferencia(contaOrigen, cant)==true){
+        double cant = ler.nextDouble();
+
+        if (contaDestino.transferencia(contaOrigen, cant) == true) {
             System.out.println("\nTransferencia realizada");
         } else {
             System.out.println("ERROR DE TRANSFERENCIA");
         }
         contaOrigen.visualizar();
         contaDestino.visualizar();
-          
-        
-    
-    
+
     }
 
 }
