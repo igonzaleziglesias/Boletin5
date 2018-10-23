@@ -18,7 +18,7 @@ public class Boletin5 {
         contaOrigen.visualizar();
         contaDestino.visualizar();
         
-        System.out.println("Indique la cantidad a transferir: ");
+        System.out.println("\nIndique la cantidad a transferir: ");
         double cant=ler.nextDouble();
         
         if (contaDestino.transferencia(contaOrigen, cant)==true){
