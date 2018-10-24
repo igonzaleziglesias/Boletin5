@@ -20,7 +20,22 @@ public class Boletin5 {
 
         System.out.println("\nIndique la cantidad a transferir: ");
         double cant = ler.nextDouble();
+        while (cant <= 0) {
+            System.out.println("ERROR DE TRANSFERENCIA");
+            System.out.println("\nIndique la cantidad a transferir: ");
+            cant = ler.nextDouble();
+        }
 
+        if (contaDestino.transferencia(contaOrigen, cant) == true) {
+            System.out.println("\nTransferencia realizada");
+        } else {
+            System.out.println("ERROR DE TRANSFERENCIA");
+        }
+        contaOrigen.visualizar();
+        contaDestino.visualizar();
+
+        System.out.println("\nIndique la cantidad a transferir: ");
+        cant = ler.nextDouble();
         if (contaDestino.transferencia(contaOrigen, cant) == true) {
             System.out.println("\nTransferencia realizada");
         } else {
